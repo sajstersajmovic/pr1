@@ -1,5 +1,4 @@
 #!/bin/python
-
 from pwn import *
 
 pr = process("/challenge/run")
@@ -20,6 +19,5 @@ n = p * q
 phi = (p - 1) * (q - 1)
 d = inverse(e, phi)
 d = pow(e, -1, phi)
-
 pt = pow(flag, d, n)
 print(pt)
